@@ -1,0 +1,7 @@
+certs
+passwd
+
+webdav/*
+!webdav/test-digest
+!webdav/test-basic
+webdav/**/data
