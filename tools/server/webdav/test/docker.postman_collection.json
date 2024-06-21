@@ -1,0 +1,970 @@
+{
+	"info": {
+		"_postman_id": "1457d835-7016-4a2c-b6f7-a80fb882cdb2",
+		"name": "docker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11905066"
+	},
+	"item": [
+		{
+			"name": "apache",
+			"item": [
+				{
+					"name": "test-apache-localhost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "test-apache-localhost",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 17 Jun 2024 20:34:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Sun, 16 Jun 2024 20:33:11 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "\"259-61b07c1dd0e8b\""
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Content-Length",
+									"value": "601"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Welcome to My Website</title>\n        <style>\r\n        body {\r\n            font-family: Arial, sans-serif;\r\n            line-height: 1.6;\r\n            padding: 20px;\r\n        }\r\n        h1 {\r\n            color: #333;\r\n        }\r\n        p {\r\n            color: #666;\r\n        }\r\n    </style>\n    </head>\n    <body>\n        <h1>Welcome to My Website</h1>\n        <p>This is a simple HTML webpage served by Apache in a Docker container.</p>\n    </body>\n</html>"
+						}
+					]
+				},
+				{
+					"name": "test-apache-secure",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://page.test/index.html",
+							"protocol": "https",
+							"host": [
+								"page",
+								"test"
+							],
+							"path": [
+								"index.html"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "test-apache-secure",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://page.test/index.html",
+									"protocol": "https",
+									"host": [
+										"page",
+										"test"
+									],
+									"path": [
+										"index.html"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 17 Jun 2024 20:34:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Mon, 17 Jun 2024 20:18:22 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "\"240-61b1baabc09df\""
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Content-Length",
+									"value": "576"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Welcome to My Website</title>\n        <style>\n        body {\n            font-family: Arial, sans-serif;\n            line-height: 1.6;\n            padding: 20px;\n        }\n        h1 {\n            color: #333;\n        }\n        p {\n            color: #666;\n        }\n    </style>\n    </head>\n    <body>\n        <h1>Welcome to My Website</h1>\n        <p>This is a simple HTML webpage served by Apache in a Docker container.</p>\n    </body>\n</html>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "apache-dav",
+			"item": [
+				{
+					"name": "violentmonkey",
+					"item": [
+						{
+							"name": "list-directory-multi-directory-violentmonkey Copy",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/violentmonkey/Violentmonkey/Violentmonkey",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"violentmonkey",
+										"Violentmonkey",
+										"Violentmonkey"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list-directory",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "realm",
+									"value": "DAV-upload",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PROPFIND",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "Depth",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/uploads/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"uploads",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list-directory",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/uploads/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"uploads",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 18 Jun 2024 20:41:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Authentication-Info",
+									"value": "rspauth=\"b2e9a314afb11d2d631c5d037325eacd\", cnonce=\"JBylOKl6\", nc=00000001, qop=auth"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1636"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp2=\"http://apache.org/dav/props/\" xmlns:lp1=\"DAV:\">\n        <D:href>/uploads/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-18T20:32:15Z</lp1:creationdate>\n                <lp1:getlastmodified>Tue, 18 Jun 2024 20:32:15 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b2ffa3422cd\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n    <D:response xmlns:lp2=\"http://apache.org/dav/props/\" xmlns:lp1=\"DAV:\">\n        <D:href>/uploads/test.txt</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype/>\n                <lp1:creationdate>2024-06-18T20:32:25Z</lp1:creationdate>\n                <lp1:getcontentlength>12</lp1:getcontentlength>\n                <lp1:getlastmodified>Tue, 18 Jun 2024 20:32:25 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"c-61b2ffacdf2a5\"</lp1:getetag>\n                <lp2:executable>F</lp2:executable>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>text/plain</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						}
+					]
+				},
+				{
+					"name": "list-directory-multi-directory",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "realm",
+									"value": "DAV-upload",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PROPFIND",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "Depth",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/test/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"test",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list-directory-multi-account",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/test/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"test",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 21:43:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Authentication-Info",
+									"value": "rspauth=\"4c663b1e99bc813d521ea26bfa66b257\", cnonce=\"I9Caq992\", nc=00000001, qop=auth"
+								},
+								{
+									"key": "Content-Length",
+									"value": "836"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp2=\"http://apache.org/dav/props/\" xmlns:lp1=\"DAV:\">\n        <D:href>/test/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T21:37:02Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 21:37:02 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b591d8ef82d\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						}
+					]
+				},
+				{
+					"name": "list-directory-multi-directory",
+					"request": {
+						"auth": {
+							"type": "digest",
+							"digest": [
+								{
+									"key": "realm",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "MD5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PROPFIND",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "Depth",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/otestzan/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"test",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list-directory-multi-directory-test",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/test/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"test",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 21:58:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Authentication-Info",
+									"value": "rspauth=\"499b6103c7d943b2f6c790cfc2964ba6\", cnonce=\"OgcefcP4\", nc=00000001, qop=auth"
+								},
+								{
+									"key": "Content-Length",
+									"value": "836"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp1=\"DAV:\" xmlns:lp2=\"http://apache.org/dav/props/\">\n        <D:href>/test/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T21:46:43Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 21:46:43 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b5940328a47\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						}
+					]
+				},
+				{
+					"name": "list-directory-multi-directory-stylus",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PROPFIND",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "Depth",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/stylus/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"stylus",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list-directory-multi-directory-stylus-digest",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/stylus/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"stylus",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 22:09:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Authentication-Info",
+									"value": "rspauth=\"adb1eb5d45230188719b8967c46f3dcd\", cnonce=\"InjgUg8D\", nc=00000001, qop=auth"
+								},
+								{
+									"key": "Content-Length",
+									"value": "838"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp1=\"DAV:\" xmlns:lp2=\"http://apache.org/dav/props/\">\n        <D:href>/stylus/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T22:00:09Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 22:00:09 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b597043066e\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						},
+						{
+							"name": "list-directory-multi-directory-stylus-basic",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/stylus/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"stylus",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 22:33:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Content-Length",
+									"value": "838"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp1=\"DAV:\" xmlns:lp2=\"http://apache.org/dav/props/\">\n        <D:href>/stylus/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T22:00:09Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 22:00:09 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b597043066e\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						}
+					]
+				},
+				{
+					"name": "list-directory-multi-directory-violentmonkey",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PROPFIND",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/xml; charset=utf-8",
+								"type": "text"
+							},
+							{
+								"key": "Depth",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/violentmonkey/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"violentmonkey",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list-directory-multi-directory-violentmonkey-digest",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/violentmonkey/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"violentmonkey",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 22:09:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Authentication-Info",
+									"value": "rspauth=\"dbdb1d5e066b1df7a6bf14bd4eb02b94\", cnonce=\"ZxsYAUY1\", nc=00000001, qop=auth"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp1=\"DAV:\" xmlns:lp2=\"http://apache.org/dav/props/\">\n        <D:href>/violentmonkey/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T22:03:59Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 22:03:59 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b597df2105d\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						},
+						{
+							"name": "list-directory-multi-directory-violentmonkey-basic",
+							"originalRequest": {
+								"method": "PROPFIND",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "text/xml; charset=utf-8",
+										"type": "text"
+									},
+									{
+										"key": "Depth",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "127.0.0.1:8080/violentmonkey/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"violentmonkey",
+										""
+									]
+								}
+							},
+							"status": "Multi-Status",
+							"code": 207,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 20 Jun 2024 22:42:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.59 (Unix) OpenSSL/3.0.11"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/xml; charset=\"utf-8\""
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<D:multistatus xmlns:D=\"DAV:\">\n    <D:response xmlns:lp1=\"DAV:\" xmlns:lp2=\"http://apache.org/dav/props/\">\n        <D:href>/violentmonkey/</D:href>\n        <D:propstat>\n            <D:prop>\n                <lp1:resourcetype>\n                    <D:collection/>\n                </lp1:resourcetype>\n                <lp1:creationdate>2024-06-20T22:03:59Z</lp1:creationdate>\n                <lp1:getlastmodified>Thu, 20 Jun 2024 22:03:59 GMT</lp1:getlastmodified>\n                <lp1:getetag>\"1000-61b597df2105d\"</lp1:getetag>\n                <D:supportedlock>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:exclusive/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                    <D:lockentry>\n                        <D:lockscope>\n                            <D:shared/>\n                        </D:lockscope>\n                        <D:locktype>\n                            <D:write/>\n                        </D:locktype>\n                    </D:lockentry>\n                </D:supportedlock>\n                <D:lockdiscovery/>\n                <D:getcontenttype>httpd/unix-directory</D:getcontenttype>\n            </D:prop>\n            <D:status>HTTP/1.1 200 OK</D:status>\n        </D:propstat>\n    </D:response>\n</D:multistatus>"
+						}
+					]
+				}
+			]
+		}
+	]
+}
